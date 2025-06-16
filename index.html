@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Faculdades de Tecnologia - MEC</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>MEC Tech</h1>
+      <p>Ministério da Educação</p>
+    </div>
+    <nav>
+      <button id="loginBtn">Login</button>
+      <button id="registerBtn">Cadastro</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Faculdades de Tecnologia no Brasil</h2>
+      <p>Explore cursos e instituições por estado ou cidade.</p>
+    </section>
+
+    <section class="search">
+      <input type="text" id="searchInput" placeholder="Digite um estado ou cidade...">
+      <button id="searchBtn">Buscar</button>
+    </section>
+
+    <section class="map-container">
+      <div id="brazilMap"></div>
+      <div class="results">
+        <h3 id="regionTitle">Selecione um estado no mapa</h3>
+        <ul id="collegesList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2023 Ministério da Educação</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

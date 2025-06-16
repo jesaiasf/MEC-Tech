@@ -1,0 +1,156 @@
+/* Reset e Fontes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #006633;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+.logo p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+nav button {
+  background-color: white;
+  color: #006633;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background-color: #e1f5e1;
+}
+
+.hero h2 {
+  margin-bottom: 0.5rem;
+  color: #006633;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search input {
+  padding: 0.5rem;
+  width: 60%;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+}
+
+.search button {
+  padding: 0.5rem 1rem;
+  background-color: #006633;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.map-container {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+#brazilMap {
+  width: 70%;
+  height: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.results {
+  width: 30%;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#collegesList {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+#collegesList li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #006633;
+  color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000; /* Garante que fique acima de tudo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 1.5rem;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1001; /* Opcional: garante que o conteúdo do modal fique acima do fundo escuro */
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .map-container {
+    flex-direction: column;
+  }
+
+  #brazilMap, .results {
+    width: 100%;
+  }
+}
